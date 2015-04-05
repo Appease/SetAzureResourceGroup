@@ -2,7 +2,7 @@
 
 ####What is it?
 
-An [Appease](http://appease.io) task template that sets an [Azure PowerShell](https://github.com/Azure/azure-powershell) account.
+An [Appease](http://appease.io) task template that sets an [Azure resource group](http://azure.microsoft.com/en-us/documentation/articles/azure-preview-portal-using-resource-groups/).
 
 ####How do I install it?
 
