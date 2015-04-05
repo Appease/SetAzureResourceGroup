@@ -14,13 +14,14 @@ Add-AppeaseTask `
 
 ####What parameters are required?
 
-#####UserName
-description: a `string` representing an Azure AD organizational account username.
+#####Name
+description: a `string` representing the name of the resource group.
 
-#####Password
-description: a `string` representing the password for the Azure AD organizational account specified by the `UserName` parameter.
+#####Location
+description: a `string` representing the geographical location of the resource group.
+tip: for available locations:
+```PowerShell
+Import-Module AzureResourceManager
+AzureResourceManager\Get-AzureLocation | ?{$_.Name -eq 'Microsoft.Resources/resourceGroups'} | select LocationsString
 
-####What parameters are optional?
-
-#####PreserveExisting
-description: a `switch` representing whether or not existing accounts should be left intact. By default all existing accounts are removed.
+```
