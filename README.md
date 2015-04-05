@@ -18,7 +18,7 @@ Add-AppeaseTask `
 description: a `string` representing the name of the resource group.
 
 #####Location
-description: a `string` representing the geographical location of the resource group.
+description: a `string` representing the geographical location of the resource group.  
 tip: for available locations:
 ```PowerShell
 Import-Module AzureResourceManager
