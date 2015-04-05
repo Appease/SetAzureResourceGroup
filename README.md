@@ -9,7 +9,7 @@ An [Appease](http://appease.io) task template that sets an [Azure PowerShell](ht
 ```PowerShell
 Add-AppeaseTask `
     -DevOpName YOUR-DEVOP-NAME `
-    -TemplateId SetAzurePowerShellAccount
+    -TemplateId SetAzureResourceGroup
 ```
 
 ####What parameters are required?
