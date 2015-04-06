@@ -18,8 +18,10 @@ function Invoke(
         ValueFromPipelineByPropertyName=$true)]
     $Location
 ){
-    
-    if(!(AzureResourceManager\Get-AzureResourceGroup | ?{($_.ResourceGroupName -eq $Name) -and ($_.Location -eq $Location)})){
+    # azure returns location strings with whitespace stripped
+    $WhitespaceStrippedLocation = $Location -replace '\s', ''
+
+    if(!(AzureResourceManager\Get-AzureResourceGroup | ?{($_.ResourceGroupName -eq $Name) -and ($_.Location -eq $WhitespaceStrippedLocation)})){
            AzureResourceManager\New-AzureResourceGroup -Name $Name -Location $Location
     }
 }
