@@ -19,7 +19,7 @@ description: a `string` representing the name of the resource group.
 
 #####Location
 description: a `string` representing the geographical location of the resource group.  
-available locations:
+known allowed values:
 ```PowerShell
 PS C:\> AzureResourceManager\Get-AzureLocation |
     ?{$_.Name -eq 'Microsoft.Resources/resourceGroups'} |
