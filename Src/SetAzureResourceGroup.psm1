@@ -1,5 +1,6 @@
 # halt immediately on any errors which occur in this module
 $ErrorActionPreference = 'Stop'
+Import-Module AzureResourceManager
 
 function Invoke(
 
@@ -18,8 +19,8 @@ function Invoke(
     $Location
 ){
     
-    if(!(Get-AzureResourceGroup | ?{($_.ResourceGroupName -eq $Name) -and ($_.Location -eq $Location)})){
-           New-AzureResourceGroup -Name $Name -Location $Location
+    if(!(AzureResourceManager\Get-AzureResourceGroup | ?{($_.ResourceGroupName -eq $Name) -and ($_.Location -eq $Location)})){
+           AzureResourceManager\New-AzureResourceGroup -Name $Name -Location $Location
     }
 }
 
