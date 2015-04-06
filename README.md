@@ -1,15 +1,15 @@
-![](https://ci.appveyor.com/api/projects/status/rayv6xsibmqf48e8?svg=true)
+![](https://ci.appveyor.com/api/projects/status/k6cmufa2prutld3m?svg=true)
 
 ####What is it?
 
-An [Appease](http://appease.io) task template that sets an [Azure PowerShell](https://github.com/Azure/azure-powershell) account.
+An [Appease](http://appease.io) task template that sets an [Azure resource group](http://azure.microsoft.com/en-us/documentation/articles/azure-preview-portal-using-resource-groups/).
 
 ####How do I install it?
 
 ```PowerShell
 Add-AppeaseTask `
     -DevOpName YOUR-DEVOP-NAME `
-    -TemplateId SetAzurePowerShellAccount
+    -TemplateId SetAzureResourceGroup
 ```
 
 ####What parameters are required?
@@ -18,7 +18,7 @@ Add-AppeaseTask `
 description: a `string` representing the name of the resource group.
 
 #####Location
-description: a `string` representing the geographical location of the resource group.
+description: a `string` representing the geographical location of the resource group.  
 tip: for available locations:
 ```PowerShell
 Import-Module AzureResourceManager
