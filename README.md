@@ -19,15 +19,5 @@ description: a `string` representing the name of the resource group.
 
 #####Location
 description: a `string` representing the geographical location of the resource group.  
-known allowed values:
-```PowerShell
-PS C:\> AzureResourceManager\Get-AzureLocation |
-    ?{$_.Name -eq 'Microsoft.Resources/resourceGroups'} |
-    select LocationsString |
-    ft -Wrap
-
-LocationsString                                                                                 
----------------                                                                                 
-Central US, East Asia, Southeast Asia, East US, East US 2, West US, North Central US, South     
-Central US, North Europe, West Europe, Japan East, Japan West, Brazil South
+known allowed values: `Central US`, `East Asia`, `Southeast Asia`, `East US`, `East US 2`, `West US`, `North Central US`, `South Central US`, `North Europe`, `West Europe`, `Japan East`, `Japan West`, `Brazil South`
 ```
