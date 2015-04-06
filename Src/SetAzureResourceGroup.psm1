@@ -21,7 +21,7 @@ function Invoke(
     # azure returns location strings with whitespace stripped
     $WhitespaceStrippedLocation = $Location -replace '\s', ''
 
-    if(!(AzureResourceManager\Get-AzureResourceGroup | ?{($_.ResourceGroupName -eq $Name) -and ($_.Location -eq $WhitespaceStrippedLocation)})){
+    if(!(AzureResourceManager\Get-AzureResourceGroup | ?{($_.ResourceGroupName -eq $Name) -and ($_.Location -eq $WhitespaceStrippedLocation) -and ($_.ResourceType -eq $ResourceType)})){
            AzureResourceManager\New-AzureResourceGroup -Name $Name -Location $Location
     }
 }
